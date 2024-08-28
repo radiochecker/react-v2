@@ -26,7 +26,7 @@ const CreditCardSection: FC<CreditCardSectionProps> = props => {
     <div className={styles.form}>
       <div className={styles.heading}>
         <img src={'./assets/burger.jpg'} onClick={()=>{props.onQuit(SECTION_TYPE.CREDIT_CARD)}}/>
-        <h1>Register Card Form</h1>
+        <h1>Register card form</h1>
       </div>
       <div className={styles.cardPage}>
 

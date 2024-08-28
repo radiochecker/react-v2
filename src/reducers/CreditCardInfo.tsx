@@ -1,7 +1,7 @@
 import {CARD_INFO_ACTION_TYPES } from '../actions/CardInfo'
 import {CardInfo, CreditCardInfoState, Payload} from "../model"
 
-const init_state:CreditCardInfoState = {
+export const init_state:CreditCardInfoState = {
     cardInfo:{
       expiredDate:"",
       name:"",
