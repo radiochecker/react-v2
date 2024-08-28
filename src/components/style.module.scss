@@ -1,0 +1,94 @@
+.form{
+    border:2px;
+    border-style:solid;
+}
+
+img{
+    width:50px;
+    height:50px;
+    margin:5px 15px;
+}
+
+.menuPage{
+    height:400px
+}
+
+.cardPage{
+    height:auto;
+}
+
+.warning{
+    color:red;
+}
+
+.heading {
+    width:100%;
+    border-bottom:2px solid;
+    display:flex;
+    h1 {
+        margin:0px;
+        padding:17px;
+        font-size:20px;
+        font-weight:600;
+        margin-left:10px;
+
+    }
+}
+
+.description{
+    min-height:185px;
+    p{
+        margin-top:35px;
+        font-size:20px;
+        font-weight:500;
+        text-align:left;
+        padding:0 25px;
+    }
+}
+
+.row{
+    width:100%;
+    margin:20px 0;
+    input {
+        width:80%;
+    }
+    button {
+        width:84%;
+        padding:14px;
+        font-size:17px;
+        border:2px;
+        border-style:solid;
+        color:black;
+        background-color: white;
+        margin-bottom: 8px;
+    }
+}
+
+.rowsub{
+    width:100%;
+    display:flex;
+
+    .space {
+        width:27%;
+    }
+
+    .subsection{
+        margin-left:15px;
+        input {
+            width:80px;
+        }
+    }
+}
+
+::placeholder {
+    color:black;
+    opacity: 1;
+    text-align: center;
+}
+
+input{
+    border: 2px;
+    border-style:solid;
+    padding:8px;
+    font-size:16px;
+}

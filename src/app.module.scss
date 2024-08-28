@@ -1,4 +1,11 @@
-.demo {
+.appContainer {
   font-family: "Roboto";
-  color: orange;
+  width:100%;
+  border:none;
+}
+
+.app{
+  text-align:center;
+  width:370px;
+  margin:0 auto;
 }
