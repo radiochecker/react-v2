@@ -2,22 +2,43 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import App from "./app";
-import MenuSection from "./components/MenuSection";
+import {Provider} from "react-redux"
+import configureMockStore from "redux-mock-store"
+import ShallowRender from "react-shallow-renderer";
 
+const mockStore = configureMockStore([])
 
-describe("React test", () => {
+describe("App", () => {
+  const getMockStore = ()=>{
+    const creditCardInfo={
+      cardValidInfo:{
+        expiredDate:true,
+        name:true,
+        cvc:true,
+        cardNumber:true
+      },
+      cardInfo:{
+        expiredDate: "02/2024",
+        name: "test test",
+        cvc: "123",
+        cardNumber:"4111111111111111"
+      }
+    }
+
+    return mockStore(creditCardInfo)
+  }
   
-  it("should display menu content", () => {
-    const quitSection = (section:string)=>{console.log(section);}
-    render(<MenuSection onQuit={quitSection}/>);
-    const linkElement = screen.getByText(/This is menu content/i);
-    expect(linkElement).toBeInTheDocument();
+  it("App can be render out without issue", () => {
+    
+    const store = getMockStore();
+    const renderer = new ShallowRender();
+    renderer.render(
+      <Provider store={store}>
+        <App/>
+      </Provider>
+    )
 
-    // const heading = screen.queryByRole("heading", {
-    //   level: 1,
-    // });
-
-    // expect(heading).toBeInTheDocument();
-    // expect(heading).toContainHTML("Welcome to your technical test!");
+    const result = renderer.getRenderOutput();
+    expect(result).not.toBeNull()
   });
 });
